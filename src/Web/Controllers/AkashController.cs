@@ -10,24 +10,24 @@ namespace Web.Controllers
 {
     public class AakashController : Controller
     {
-        public IActionResult ShowText()
+        public IActionResult Text()
         {
-            return Content("Here is text - hit back to return. ");
+            return Content("Text Page");
         }
     
-        public IActionResult ShowJSON()
+        public IActionResult JSON()
         {
-            return  Json(new {name="favorite quote", quote="This is my favorite quote."});
+            return  Json(new {name="aaksh", quote="Akash is the best"});
         }
     
-        public IActionResult ShowHTML()
+        public IActionResult HTML()
         {
-            var h = "<!DOCTYPE html><html><body>An awesome quote. Note return path has to use the name of the controller." + 
-            "<br><br> <a href='/Quote'>Go Back to Quotes</a></body></html>";
+            var h = "<!DOCTYPE html><html><body>abcdefgh" + 
+            "<br><br> <a href='/Quote'>Go Back</a></body></html>";
             return Content(h, "text/html");
         }
 
-        public IActionResult ShowView()
+        public IActionResult View()
         {
             
             return View();
